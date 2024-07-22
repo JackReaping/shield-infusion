@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Enhanced Defense Shield</name>
+		<description></description>
+		<author url="https://github.com/JackReaping">Jack Reaping</author>
+		<update version="0.1.0">
+			<file name="items-armor.xml" url="https://raw.githubusercontent.com/JackReaping/Juggernaut/main/shieldinfusion.xml" />
+		</update>
+	</info>
+
+	<!--shield-->
+	<element name="Enhanced Defense Shield" type="Armor" source="Arcana Unearthed" id="ID_WOTC_AU_GEAR_SHIELD">
+		<description>
+			<p>A shield is made from wood or metal and is carried in one hand. Wielding a shield increases your Armor Class by 2. You can benefit from only one shield at a time. A creature gains a +1 bonus to Armor Class while wearing (armor) or wielding (shield) the infused item. The bonus increases to +2 when you reach 10th level in this class.</p>
+		</description>
+		<setters>
+			<set name="category">Armor</set>
+			<set name="cost" currency="gp">10</set>
+			<set name="weight" lb="6">6 lb.</set>
+			<set name="slot">onehand,secondary</set>
+			<set name="type">Shield</set>
+			<set name="armor">Shield</set>
+			<set name="armorClass">+3</set>
+			<set name="proficiency">ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELD</set>
+		</setters>
+		<rules>
+			<stat name="ac:shield" value="2" bonus="shield" />
+			<stat name="ac:shield" value="3" bonus="shield" level="10"/>
+		</rules>
+	</element>
+</elements>
